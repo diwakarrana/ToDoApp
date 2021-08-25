@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+* ,*:after, *:before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    line-height: 1;
+    font-family: "Roboto", sans-serif;
+    color: #202020;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    background-color: #db4c13;
+    height: 9vh;
+    width: 100%;
+  }
+
+.header nav{
+    width: 992px;
+}
+
+  .logo{
+    height: 50px;
+    width: 60px;
+  }
+
+  .content{
+      display: flex;
+      width: 100%;
+      margin: auto;
+      background-color: aqua;
+  }
+
+  .sidebar{
+      width: 30%;
+      height: 100vh;
+      border-right: 1px solid black;
+      div {
+          margin: 20px;
+          user-select: none;
+          padding: 15px;
+          cursor: pointer;
+          &:active {
+              background-color: white;
+          }
+          .icon {
+              margin-right: 10px;
+          }
+      }
+
+  }   //end of sidebar 
+
+.task{
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    h1{
+        text-align: center;
+    }
+    user-select: none;
+    padding: 20px;
+
+    .add-task-btn{
+        .plus{
+            font-size: 18px;
+            margin-right: 10px;
+            color: green;
+        }
+        .add-task-text{
+            font-size: 15px;
+            color: green;
+        }
+    }
+
+    .add-task-dialog{
+        margin-top: 10px;
+        input{
+            width: 100%;
+            border: 1px solid aqua;
+            background-color: white;
+            border-radius: 5px;
+            height: 35px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .add-task-action-container{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            .add-btn{
+                background-color: #db4c13;
+                color: white;
+                border: 1px solid transparent;
+                margin-right: 5px;
+                font-weight: bold;
+                font-size: 13px;
+                padding: 6px 12px 7px 12px;
+                border-radius: 3px !important;
+                &:disabled{
+                    background-color: grey;
+                }
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+            .cancle-btn{
+                all: unset;
+                color: #555;
+                cursor: pointer;
+                font-size: 14px;
+                margin: 0px 10px;
+            }
+        }//end of add-task-action-container
+
+
+    }
+
+    .task-items-container{
+        margin-top: 40px;
+        padding: 0px 20px;
+        .task-item{
+            margin-top: 20px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            &:not(:last-child) {
+                border-bottom: 1px solid #db4c13;
+            }
+        }
+    }//end of item container
+}//end of task bar
+
+
+
+
+
+
